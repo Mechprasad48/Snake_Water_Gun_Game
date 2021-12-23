@@ -1,0 +1,56 @@
+print("Code by Prasad Sawantdesai!!!")
+print("Welcome to Snake Water Gun Game")
+print("Rule of game-Water will win from gun , gun will win from snake, snake will win from water. ")
+print("Start the game now!!!")
+user_13 = input("Enter your name before start the game-\n")
+import random
+options = ['snake','water','gun']
+game_12 = random.choice(options)
+computer_score = 0
+user_score = 0
+number_of_chances = 1
+print(f"{user_13} You have only 5 chances to win this game")
+print("Hey Which options You will go for?")
+while number_of_chances<=5:
+    user_12 = input("snake\twater\tgun\n")
+    if user_12 == "snake":
+        if game_12 == 'snake':
+            print(f"Better luck next time {user_13} It's a tie!!!")
+        if game_12 == 'water':
+            print(f"Congratulation {user_13} You got the Point!!!")
+            user_score+=1
+        if game_12 == 'gun':
+            print(f"Sorry {user_13} computer won this point!!!")
+            computer_score+=1
+    elif user_12 == "water":
+        if game_12 == 'water':
+            print(f"Better luck next time {user_13} It's a tie!!!")
+        if game_12 == 'snake':
+            print(f"Sorry {user_13} computer won this point!!!")
+            computer_score+=1
+        if game_12 == 'gun':
+            print(f"Congratulation {user_13} You got the Point!!!")
+            user_score+=1
+    elif user_12 == "gun":
+        if game_12 == 'gun':
+            print(f"Better luck next time {user_13} It's a tie!!!")
+        if game_12 == "snake":
+            print(f"Congratulation {user_13} You got the  Point!!!")
+            user_score+=1
+        if game_12 == 'water':
+            computer_score+=1
+            print(f"Sorry {user_13} loose the point!!!")
+            print(number_of_chances, f"No of chances {user_13} take to finish this game.")
+    print(5.-number_of_chances,"number_of_chances")
+    number_of_chances = number_of_chances+1
+if user_score < computer_score:
+    print("computer won the game")
+elif user_score > computer_score:
+    print(f"Congratulation {user_13} you won by computer")
+else:
+    print("It's draw better luck next time")
+
+print(f"Final score: {user_score},{computer_score}")
+if number_of_chances>5:
+    print("Game over")
+print("Hope you enjoy the game!!!")
