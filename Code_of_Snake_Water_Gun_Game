@@ -1,9 +1,27 @@
+import time
+import random
 print("Code by Prasad Sawantdesai!!!")
 print("Welcome to Snake Water Gun Game")
-print("Rule of game-Water will win from gun , gun will win from snake, snake will win from water. ")
-print("Start the game now!!!")
 user_13 = input("Enter your name before start the game-\n")
-import random
+inputs = input("Would like to know rules of the game?")
+if (inputs == "yes" or inputs == "Yes" or inputs == "YES" or inputs == "y" or inputs == "Y"):
+    print("Snake vs. Water: Snake drinks the water hence wins")
+    time.sleep(2.0)
+    print("Water vs. Gun: The gun will drown in water, hence a point for water.")
+    time.sleep(2.0)
+    print("Gun vs. Snake: Gun will kill the snake and win")
+else:
+    print(f"{user_13} I think you already know the rules")  
+print("Note:")
+time.sleep(1.0)
+print("Type snake for snake")
+time.sleep(1.0)
+print("type gun for gun")
+time.sleep(1.0)
+print("Type water for water")
+time.sleep(1.0)
+print("Start the game now!!!")
+
 options = ['snake','water','gun']
 game_12 = random.choice(options)
 computer_score = 0
@@ -40,8 +58,8 @@ while number_of_chances<=5:
         if game_12 == 'water':
             computer_score+=1
             print(f"Sorry {user_13} loose the point!!!")
-            print(number_of_chances, f"No of chances {user_13} take to finish this game.")
-    print(5.-number_of_chances,"number_of_chances")
+            # print(number_of_chances, f"No of chances {user_13} take to finish this game.")
+    print(5-number_of_chances,"No of chances Left")
     number_of_chances = number_of_chances+1
 if user_score < computer_score:
     print("computer won the game")
@@ -53,4 +71,4 @@ else:
 print(f"Final score: {user_score},{computer_score}")
 if number_of_chances>5:
     print("Game over")
-print("Hope you enjoy the game!!!")
+print(f"Hope you enjoy the game {user_13}!!!")
